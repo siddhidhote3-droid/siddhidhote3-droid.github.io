@@ -1,116 +1,213 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Siddhi Kishor Dhote — AI & Robotics Engineer</title>
-  <meta name="description" content="Portfolio of Siddhi Kishor Dhote — AI, robotics, machine learning, embedded systems, computer vision, ROS." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siddhi Kishor Dhote | AI & Robotics Engineer</title>
 
-  <!-- Theme variables & lightweight reset -->
-  <style>
-    :root{
-      --bg:#071724; /* dark navy */
-      --card:#0b1220; /* deep card */
-      --accent:#00d4ff; /* cyan */
-      --muted:#cbd5e1;
-      --glass:rgba(255,255,255,0.04);
-      --radius:14px;
-      --glass-strong: rgba(255,255,255,0.06);
-      --glass-border: rgba(255,255,255,0.06);
-      --glass-blur: 8px;
-      --shadow: 0 8px 30px rgba(2,6,23,0.6);
-      --success:#32d583;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Segoe UI Mono";
-      --sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+<style>
+    body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: #06121e;
+        color: white;
+        scroll-behavior: smooth;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%;margin:0;font-family:var(--sans);color:var(--muted);background:linear-gradient(180deg,var(--bg) 0%, #071826 60%);-webkit-font-smoothing:antialiased}
-    a{color:var(--accent);text-decoration:none}
-    .wrap{max-width:1100px;margin:36px auto;padding:24px}
 
-    /* Header / hero */
-    header{display:flex;gap:20px;align-items:center;justify-content:space-between;padding:22px;border-radius:var(--radius);background:linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));box-shadow:var(--shadow);backdrop-filter:blur(var(--glass-blur));border:1px solid var(--glass-border)}
-    .brand{display:flex;gap:14px;align-items:center}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4b8cff);display:grid;place-items:center;color:#001; font-weight:700}
-    .brand h1{margin:0;font-size:16px;color:#e6f7ff}
-    .brand p{margin:0;font-size:12px;color:var(--muted)}
-    .nav{display:flex;gap:14px;align-items:center}
-    .btn{padding:8px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#6be1ff);color:#001;font-weight:600;border:none;cursor:pointer}
+    /* TOP NAV CARD */
+    .top-card {
+        width: 90%;
+        margin: 30px auto;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: fadeIn 1s ease-in-out;
+    }
 
-    /* main grid */
-    .main{display:grid;grid-template-columns:1fr 360px;gap:20px;margin-top:22px}
-    @media (max-width:960px){.main{grid-template-columns:1fr}}
+    .name-title {
+        font-size: 26px;
+        font-weight: 700;
+    }
 
-    /* Hero card */
-    .hero{padding:28px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border:1px solid var(--glass-border)}
-    .hero h2{color:#e9fbff;margin:0 0 8px 0;font-size:22px}
-    .hero .title{font-size:28px;color:white;margin:0 0 6px}
-    .chip{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.03);margin-right:8px;font-size:12px}
-    .typing{color:var(--accent);font-weight:700}
-    .hero p{line-height:1.5;color:var(--muted)}
+    .subtitle {
+        font-size: 14px;
+        opacity: 0.7;
+    }
 
-    /* skill bars */
-    .skills{display:flex;flex-direction:column;gap:10px;margin-top:18px}
-    .skill{display:flex;flex-direction:column}
-    .skill .label{display:flex;justify-content:space-between;font-size:13px;color:var(--muted)}
-    .bar{height:12px;background:rgba(255,255,255,0.04);border-radius:999px;margin-top:6px;overflow:hidden}
-    .bar > i{display:block;height:100%;background:linear-gradient(90deg,var(--accent),#7de0ff);width:0;transition:width 1.2s cubic-bezier(.2,.9,.3,1)}
+    .btn {
+        background: #00aaff;
+        color: black;
+        padding: 10px 22px;
+        border: none;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-left: 10px;
+        transition: 0.3s;
+    }
 
-    /* cards */
-    .card{background:var(--card);padding:18px;border-radius:12px;border:1px solid var(--glass-border);box-shadow:0 10px 30px rgba(2,6,23,0.6)}
-    .projects{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    @media (max-width:720px){.projects{grid-template-columns:1fr}}
-    .proj{position:relative;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03)}
-    .proj .meta{padding:12px}
-    .proj h3{margin:0 0 6px 0;color:#e9fbff}
-    .proj p{margin:0;color:var(--muted);font-size:13px}
-    .proj .tags{margin-top:10px;display:flex;gap:8px;flex-wrap:wrap}
-    .tag{font-size:12px;padding:6px 8px;border-radius:8px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03)}
-    .proj .actions{display:flex;gap:8px;margin-top:12px}
-    .ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px;border-radius:8px;color:var(--muted)}
+    .btn:hover {
+        transform: scale(1.07);
+        background: #33cfff;
+    }
 
-    /* timeline */
-    .timeline{display:flex;flex-direction:column;gap:12px}
-    .titem{display:flex;gap:12px}
-    .titem .dot{width:12px;height:12px;border-radius:50%;background:var(--accent);margin-top:6px}
-    .titem h4{margin:0;color:#e9fbff}
-    .titem p{margin:0;font-size:13px;color:var(--muted)}
+    /* SECTION HEADERS */
+    .section-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin: 40px 0 20px 30px;
+    }
 
-    /* contact */
-    form{display:flex;flex-direction:column;gap:10px}
-    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:var(--muted);min-width:0}
-    textarea{min-height:110px}
+    /* PROJECT CARDS */
+    .projects-container {
+        width: 90%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        animation: fadeUp 1s ease-in-out;
+    }
 
-    footer{margin-top:24px;text-align:center;color:var(--muted);font-size:13px}
+    .project-card {
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        padding: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        transition: 0.3s;
+    }
 
-    /* little effects */
-    .float-robot{width:120px;height:120px;border-radius:12px;background:linear-gradient(135deg,#071724, #0b1724);display:grid;place-items:center;border:1px solid rgba(255,255,255,0.03)}
+    .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0px 0px 20px #008cff80;
+    }
 
-    /* reveal animations */
-    [data-anim]{opacity:0;transform:translateY(16px);transition:all 600ms cubic-bezier(.2,.9,.3,1)}
-    [data-anim].in{opacity:1;transform:none}
+    .project-title {
+        font-size: 20px;
+        font-weight: 600;
+        color: #57c7ff;
+    }
 
-    /* hover card micro-animations */
-    .proj:hover{transform:translateY(-6px) scale(1.01);transition:transform .25s}
+    .project-desc {
+        font-size: 14px;
+        opacity: 0.8;
+        margin-top: 8px;
+    }
 
-    /* resume button */
-    .cta-row{display:flex;gap:12px;align-items:center}
+    /* CONTACT */
+    .contact-box {
+        width: 90%;
+        margin: 20px auto 60px;
+        padding: 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        animation: fadeUp 1s ease-in-out;
+    }
 
-    /* small helpers */
-    .muted{color:var(--muted)}
-  </style>
+    .email {
+        font-size: 20px;
+        color: #00c3ff;
+        word-break: break-all;
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeUp {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+</style>
+
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="brand">
-        <div class="logo">SK</div>
-        <div>
-          <h1>Siddhi Kishor Dhote</h1>
-          <p class="muted">AI & Robotics Engineer — Computer Vision • ROS • Embedded • ML</p>
+
+<!-- TOP CARD -->
+<div class="top-card">
+    <div>
+        <div class="name-title">Siddhi Kishor Dhote</div>
+        <div class="subtitle">AI & Robotics Engineer • Computer Vision • ROS • Embedded • ML</div>
+    </div>
+
+    <div>
+        <button class="btn" onclick="scrollToProjects()">Projects</button>
+        <button class="btn" onclick="scrollToContact()">Contact</button>
+    </div>
+</div>
+
+<!-- PROJECTS SECTION -->
+<h2 class="section-title" id="projects">Projects</h2>
+
+<div class="projects-container">
+
+    <div class="project-card">
+        <div class="project-title">AI Face Recognition System</div>
+        <div class="project-desc">
+            A real-time face recognition model using OpenCV + deep learning. Includes live video detection.
         </div>
-      </div>
-      <div class="nav">
-        <a class="btn" href="#projects">Projects</a>
-        <a class="btn" href="#contact">Contact</a>
-        <a
+    </div>
+
+    <div class="project-card">
+        <div class="project-title">YOLO Object Detection & Tracking</div>
+        <div class="project-desc">
+            High-accuracy object detection using YOLOv8 with custom datasets and motion tracking.
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-title">Gesture Recognition AI</div>
+        <div class="project-desc">
+            CNN-based hand gesture classifier built for human-robot interaction.
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-title">TurtleBot SLAM + ROS Navigation</div>
+        <div class="project-desc">
+            Full SLAM mapping and autonomous navigation using ROS & LIDAR simulation.
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-title">Obstacle Avoidance Robot</div>
+        <div class="project-desc">
+            Autonomous robot using ultrasonic sensors + ML path prediction.
+        </div>
+    </div>
+
+    <div class="project-card">
+        <div class="project-title">ESP32 Smart Home Automation</div>
+        <div class="project-desc">
+            IoT home automation using ESP32 with wireless control and data monitoring.
+        </div>
+    </div>
+
+</div>
+
+<!-- CONTACT SECTION -->
+<h2 class="section-title" id="contact">Contact</h2>
+
+<div class="contact-box">
+    <div class="email">📧 siddhidhote3@gmail.com</div>
+</div>
+
+<script>
+    function scrollToProjects() {
+        document.getElementById("projects").scrollIntoView({ behavior: "smooth" });
+    }
+
+    function scrollToContact() {
+        document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+    }
+</script>
+
+</body>
+          </html>                                                
