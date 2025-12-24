@@ -20,7 +20,12 @@
   --muted:#94a3b8;
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
 
 body{
   background:radial-gradient(circle at top,#0b122a,var(--bg));
@@ -43,7 +48,7 @@ header p{
   font-size:1.1rem;
 }
 
-/* SECTION */
+/* SECTIONS */
 section{padding:80px 10%}
 .title{
   font-size:1.7rem;
@@ -52,13 +57,15 @@ section{padding:80px 10%}
 }
 .title::after{
   content:'';
-  width:70px;height:3px;
+  width:70px;
+  height:3px;
   background:var(--accent);
   position:absolute;
-  left:0;bottom:-12px;
+  left:0;
+  bottom:-12px;
 }
 
-/* GRID & CARD */
+/* GRID & CARDS */
 .grid{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -81,9 +88,13 @@ section{padding:80px 10%}
   margin-bottom:14px;
 }
 .card h3{margin-bottom:10px}
-.card p{color:var(--muted);font-size:.95rem}
+.card p{
+  color:var(--muted);
+  font-size:.95rem;
+  line-height:1.6;
+}
 
-/* DATA BOX */
+/* DATA */
 .data-box{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
@@ -96,8 +107,14 @@ section{padding:80px 10%}
   text-align:center;
   border:1px solid rgba(255,255,255,.05);
 }
-.data h2{color:var(--accent);font-size:2rem}
-.data span{color:var(--muted);font-size:.9rem}
+.data h2{
+  color:var(--accent);
+  font-size:2rem;
+}
+.data span{
+  color:var(--muted);
+  font-size:.9rem;
+}
 
 /* FOOTER */
 footer{
@@ -111,6 +128,7 @@ footer{
 
 <body>
 
+<!-- HEADER -->
 <header>
   <h1>Siddhi <span>Dhote</span></h1>
   <p>AI Engineering • Fractal Mathematics • System Optimization</p>
@@ -127,13 +145,13 @@ footer{
     </div>
     <div class="card">
       <i class="fas fa-network-wired"></i>
-      <h3>Team Collaboration</h3>
-      <p>AI system designed to simulate team-based intelligence and distributed problem solving.</p>
+      <h3>Team Intelligence</h3>
+      <p>Distributed AI logic inspired by collaborative and multi-agent systems.</p>
     </div>
     <div class="card">
       <i class="fas fa-microchip"></i>
       <h3>Engineering Optimization</h3>
-      <p>Efficient computing logic inspired by semiconductor-level optimization.</p>
+      <p>System efficiency inspired by semiconductor and low-level computing principles.</p>
     </div>
   </div>
 </section>
@@ -145,17 +163,17 @@ footer{
     <div class="card">
       <i class="fas fa-heartbeat"></i>
       <h3>Health Pattern Analysis</h3>
-      <p>AI models analyze treatment response patterns in animals without invasive methods.</p>
+      <p>AI-based analysis of treatment response patterns using non-invasive data.</p>
     </div>
     <div class="card">
       <i class="fas fa-dna"></i>
-      <h3>Biological Data Modeling</h3>
-      <p>Mathematical & AI-based prediction of recovery and treatment efficiency.</p>
+      <h3>Biological Modeling</h3>
+      <p>Mathematical and AI models used to predict recovery and biological response.</p>
     </div>
     <div class="card">
       <i class="fas fa-leaf"></i>
       <h3>Ethical AI Approach</h3>
-      <p>Focus on non-harmful, simulation-based, ethical AI research.</p>
+      <p>Focus on simulation-based, ethical, and non-harmful AI research.</p>
     </div>
   </div>
 </section>
@@ -166,33 +184,74 @@ footer{
   <div class="card">
     <i class="fas fa-award"></i>
     <h3>Photo of the Year</h3>
-    <p>Recognized for visual documentation of scientific and mathematical concepts.</p>
+    <p>Recognized for capturing scientific and mathematical concepts through visual storytelling.</p>
   </div>
 </section>
 
-<!-- FRACTAL MODEL -->
+<!-- FRACTAL TREE PROJECT (MERGED SECTION) -->
 <section>
-  <h2 class="title">Fractal Model – Research & Usage</h2>
+  <h2 class="title">Fractal Tree Project</h2>
+
   <div class="grid">
     <div class="card">
       <i class="fas fa-tree"></i>
-      <h3>Fractal Tree Model</h3>
-      <p>Recursive mathematical structure representing natural growth systems.</p>
+      <h3>Project Overview</h3>
+      <p>
+        The Fractal Tree Model is a mathematical and computational representation
+        of natural growth systems based on self-similarity and recursion.
+      </p>
     </div>
+
     <div class="card">
       <i class="fas fa-code"></i>
-      <h3>Python Implementation</h3>
-      <p>Coded fractal generation using recursion, ratio control, and angle optimization.</p>
+      <h3>Coding & Implementation</h3>
+      <p>
+        Implemented using Python programming, where recursion generates repeated
+        branching structures controlled by ratios and angles.
+      </p>
     </div>
+
     <div class="card">
-      <i class="fas fa-chart-line"></i>
-      <h3>Applications</h3>
-      <p>Used in AI, biology modeling, antenna design, and medical imaging concepts.</p>
+      <i class="fas fa-calculator"></i>
+      <h3>Mathematical Concepts</h3>
+      <p>
+        Uses geometry, scaling ratios, angles, and recursion to create complex
+        patterns from simple rules.
+      </p>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:30px">
+    <div class="card">
+      <i class="fas fa-brain"></i>
+      <h3>AI & System Optimization</h3>
+      <p>
+        Demonstrates how complex systems can be optimized using minimal logical rules,
+        similar to AI and engineering architectures.
+      </p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-heartbeat"></i>
+      <h3>Real-World Applications</h3>
+      <p>
+        Applied in biological modeling, medical imaging concepts, antenna design,
+        and AI-based pattern recognition.
+      </p>
+    </div>
+
+    <div class="card">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Learning Outcome</h3>
+      <p>
+        This project connects mathematics, coding, and AI thinking to understand
+        and model real-world natural systems.
+      </p>
     </div>
   </div>
 </section>
 
-<!-- DATA SNAPSHOT -->
+<!-- TECH SNAPSHOT -->
 <section>
   <h2 class="title">Technical Snapshot</h2>
   <div class="data-box">
